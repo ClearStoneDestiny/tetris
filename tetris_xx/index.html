@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    
+    <!-- <div id="buttons">
+         <button id="prev-button" onclick="prevPage()">Назад</button>
+        <button id="next-button" onclick="nextPage()">Вперед</button>
+    </div> -->
+
+    <!--Main page-->
+    <div onload="playMusic()" class="page page-1-styles" id="page-1">
+        <div class="container">
+
+
+            <!-- Left section -->
+
+            <div class="left-section">
+                <img src="./images/TMNT1987.jpg" alt="">
+                <h2>COWABANGA</h2>
+                <!-- <div class="nextTetromino">
+                    <h3>Next Figure</h3>
+                    <div id="nextFigure"></div>
+                </div> -->
+                <button class="button-new-game" onclick="playClickSound()" onmouseenter="playHoverSound()">New Game</button>
+                <button class="arrow-up" id="arrow-up" onclick="playClickSound()" onmouseenter="playHoverSound()"><img src="icons/arrow-up.png" alt=""></button>
+                <div class="arrow-button-container">
+                    <button class="arrow-left" id="arrow-left" onclick="playClickSound()" onmouseenter="playHoverSound()"><img src="icons/arrow-left.png" alt=""></button>
+                    <button class="arrow-down" id="arrow-down" onclick="playClickSound()" onmouseenter="playHoverSound()"><img src="icons/arrow-down.png" alt=""></button>
+                    <button class="arrow-right" id="arrow-right" onclick="playClickSound()" onmouseenter="playHoverSound()"><img src="icons/arrow-right.png" alt=""></button>
+                </div>
+            </div>
+            <div class="grid" id="grid"></div>
+
+
+
+            <!-- Right section -->
+
+            <div class="right-section">
+                
+                <!-- <div class="leader-table">
+                    High score
+                    <span id="place"></span>
+                </div> -->
+                <h3>Level: <span id="currentLevel"></span></h3>
+                <h4>Score <span id="nextLevelScore"></span> to advance next level</h4>
+                <h4>Total score: <span id="score">0</span></h4>
+                <h4>Total time: <span id="time">00:00</span></h4>
+                <div id="buttons" >
+                   <button id="prev-button" onclick="prevPage(); playClickSound()" onmouseenter="playHoverSound()">Back</button>
+                   <button id="next-button" onclick="nextPage(); playClickSound()" onmouseenter="playHoverSound()">Go</button>
+               </div>
+
+            <div id="music-container">
+                <div id="music-controls">
+                    <button id="music-toggle-button" onclick="toggleMusic()">
+                        <img id="music-icon" src="./icons/music_on.svg" alt="">
+                    </button>
+                    <input type="range" class="volume-slider" id="music-volume-slider" min="0" max="1" step="0.1" onchange="changeMusicVolume(this.value)">
+                </div>
+            
+                <div id="sound-effects-controls">
+                    <button id="sound-effects-toggle-button" onclick="toggleSoundEffects()">
+                        <img id="sound-icon" src="./icons/sound_on.png" alt="">
+                    </button>
+                    <input type="range" class="volume-slider" id="sound-effects-volume-slider" min="0" max="1" step="0.1" value="1" onchange="changeSoundEffectsVolume(this.value)">
+                </div>
+            </div>
+               
+            
+            <audio id="click-sound" src="./sounds/button_click.mp3"></audio>
+            <audio id="hover-sound" src="./sounds/button_choise.mp3"></audio>
+            <audio id="pause-sound" src="./sounds/tmnt_pause_sound.mp3"></audio>
+
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="overlay">
+        <h2>Game over</h2>
+        <button class="button-restart" onclick="playClickSound()" onmouseenter="playHoverSound()">Restart</button>
+    </div>
+
+    <div class="win-screen">
+        <h2>Congratulation</h2>
+        <h3>Game complete</h3>
+        <button id="prev-button" onclick="prevPage(); playClickSound()" onmouseenter="playHoverSound()">Back</button>
+    </div>
+
+    <div id="pause">
+        <h2>Pause</h2>
+        <h4>Press "Esc" to start the game</h4>
+    </div>
+
+    <!--Page 2-->
+    <div class="page" id="page-2">
+        <h1>New page</h1>
+        <p>Some content</p>
+        <div id="buttons">
+            <button id="prev-button" onclick="prevPage()">Back</button>
+           <button id="next-button" onclick="nextPage()">Go</button>
+       </div>
+    </div>
+
+    <!--Page 3-->
+    <div class="page" id="page-3">Page 3
+        <h1>TMNT</h1>
+        <p>COWABANGA</p>
+        <div id="buttons">
+            <button id="prev-button" onclick="prevPage()">Back</button>
+           <button id="next-button" onclick="nextPage()">Go</button>
+       </div>
+    </div>
+
+    <!--Page 4-->
+    <div class="page" id="page-4">Page 4
+        <div id="buttons">
+            <button id="prev-button" onclick="prevPage()">Back</button>
+           <button id="next-button" onclick="nextPage()">Go</button>
+       </div>
+    </div>
+
+    
+   
+
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
+

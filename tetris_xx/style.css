@@ -1,0 +1,328 @@
+@font-face {
+    font-family: TurtlesFont;
+    src: url(./fonts/Turtles-zOzL.ttf);
+}
+
+/* Page 1 styles */
+
+
+/* Page 2 styles */
+
+.page-2-styles {
+    background-color: lightgreen;
+    color: black;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    color: #45DE33;
+    font-size: x-large;
+    text-shadow:
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000, 
+        -1.5px -1.5px 0 #fff,  
+         1.5px -1.5px 0 #fff,
+        -1.5px  1.5px 0 #fff,
+         1.5px  1.5px 0 #fff;
+    width: 100vw;
+    align-items: center;
+   
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px; 
+    user-select: none;
+}
+
+.nextTetromino{
+    text-align: center;
+    background-color: aliceblue;
+    width: 300px;
+    height: 200px;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    user-select: none;
+}
+
+.leader-table{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    height: 6rem;
+    background-color: antiquewhite;
+}
+
+.overlay{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(127, 255, 212, 0.314);
+}
+
+.overlay h2{
+    color: #45DE33;
+    text-shadow:
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000, 
+        -1.5px -1.5px 0 #fff,  
+         1.5px -1.5px 0 #fff,
+        -1.5px  1.5px 0 #fff,
+         1.5px  1.5px 0 #fff;
+    font-size: 50px;
+    padding-bottom: 30px;
+    user-select: none;
+}
+
+.win-screen{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(127, 255, 212, 0.314);
+}
+
+.win-screen h2, .win-screen h3{
+    color: #45DE33;
+    text-shadow:
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000, 
+        -1.5px -1.5px 0 #fff,  
+         1.5px -1.5px 0 #fff,
+        -1.5px  1.5px 0 #fff,
+         1.5px  1.5px 0 #fff;
+    font-size: 50px;
+    padding-bottom: 30px;
+    user-select: none;
+}
+
+#pause{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(127, 255, 212, 0.314);
+    color: #45DE33;
+    text-shadow:
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000, 
+        -1.5px -1.5px 0 #fff,  
+         1.5px -1.5px 0 #fff,
+        -1.5px  1.5px 0 #fff,
+         1.5px  1.5px 0 #fff;
+}
+
+#pause h2{
+    font-size: 60px;
+    user-select: none;
+}
+
+#pause h4{
+    font-size: 25px;
+    user-select: none;
+}
+
+.button-restart,
+.button-new-game{
+    border-radius: 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'TurtlesFont';
+    font-size: 25px;
+    height: 80px;
+    width: 200px;
+    user-select: none;
+}
+
+.button-restart:hover,
+.button-new-game:hover,
+.arrow-up:hover,
+.arrow-left:hover,
+.arrow-down:hover,
+.arrow-right:hover{
+    background-color: #45DE33;
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px 2px #4CAF50;
+}
+
+
+.arrow-up{
+    background: #4CAF50;
+    border-radius: 12px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+.arrow-left,
+.arrow-down,
+.arrow-right{
+    align-self: center;
+    background-color: #4CAF50;
+    border-radius: 12px;
+    border: none;
+    user-select: none;
+}
+
+
+#music-toggle-button, #sound-effects-toggle-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#music-toggle-button img, #sound-effects-toggle-button img{
+    width: 40px;
+    height: 40px; 
+}
+
+/* Music containers styles */
+#music-container {
+    align-items: center; 
+    display: flex;
+    padding-top: 20px;
+        
+}
+
+#music-icon{
+    margin-right: 20px;
+} 
+
+#sound-icon {
+    margin-left: 20px; 
+}
+
+/* Slider styles */
+.volume-slider {
+    width: 70px; 
+    height: 5px;
+    display: grid;
+    transform: translateX(-50%); 
+    opacity: 0; 
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+
+/* Visible slider style */
+.volume-slider.visible {
+    bottom: 10px; 
+    opacity: 1;  
+}
+
+
+#buttons button{
+    border-radius: 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'TurtlesFont';
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 40px;
+    margin: 4px 2px;
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+#buttons button:hover{
+    background-color: #45DE33;
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px 2px #4CAF50;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.grid{
+    /* Variation for sewer level /
+    /* background: linear-gradient(to bottom, #4B0082, #FF69B4, #FFA500); */
+    background: rgb(27, 73, 133);
+    padding: 0.5vh;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 0.5vh;
+}
+
+.grid > div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background-color: rgba(34, 26, 145, 0.799);
+    border-radius: 0.3vh;
+}
+
+.grid .O{
+    background-image: linear-gradient(to bottom, #70758e, #a964e0);
+    
+}
+
+.grid .J{
+    background-image: linear-gradient(to bottom, #EEC24B, #933907);
+}
+
+.grid .S{
+    background-image: linear-gradient(to bottom ,#906147, #ac3e9d);
+}
+
+.grid .L{
+    background-image: linear-gradient(to bottom, #2255b5, #3eee3e);
+      
+}
+
+.grid .Z{
+    background-image: linear-gradient(to bottom, #e11e0c,#3eee3e);
+}
+
+.grid .T{
+    background-image: linear-gradient(to bottom, #FD8827,  #3eee3e);
+}
+
+.grid .I{
+    background-image: linear-gradient(to bottom, #960ce1, #3eee3e);
+
+}
